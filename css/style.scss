@@ -1,0 +1,454 @@
+@charset "utf-8";
+
+$pri-color-1: #f2f2f2;
+$pri-color-2: #090909;
+$sec-color: #c3c7aa;
+$point-color: #ca171e;
+
+@mixin center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 반응형
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+// 기본설정
+
+html,
+body {
+  background-color: $pri-color-2;
+  scroll-behavior: smooth;
+
+  overflow-x: hidden;
+}
+
+#wrap {
+  color: $pri-color-1;
+  min-width: 1200px;
+  margin: 0 auto;
+  @include tablet() {
+    min-width: 100%;
+  }
+
+  @include mobile() {
+    min-width: 100%;
+  }
+}
+
+// 헤더
+
+header {
+  @include tablet() {
+    display: none;
+  }
+  > nav {
+    position: fixed;
+    right: 2%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1000;
+
+    > .gnb {
+      > ol {
+        > li {
+          margin: 20px 0;
+
+          &.on > a,
+          &:hover > a {
+            background-color: $point-color;
+          }
+
+          > a {
+            display: block;
+            width: 12px;
+            height: 12px;
+            text-indent: -9999px;
+            border: 2px solid $pri-color-1;
+            box-sizing: border-box;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+        } //end of li
+      } //end of ol
+    } //end of .gnb
+  } //end of nav
+} //end of header
+
+// #HOME
+
+#home {
+  position: relative;
+  min-width: 1200px;
+  height: 100vh;
+
+  @include tablet() {
+    min-width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > .top_teaser {
+    @include tablet() {
+      display: none;
+    }
+
+    @include center;
+    z-index: 10;
+
+    > video {
+      display: block;
+      width: 1200px;
+    }
+  } //end of .top_teaser
+
+  > .top_bgv {
+    @include tablet() {
+      display: none;
+    }
+
+    @include center;
+    z-index: 5;
+
+    > video {
+      display: block;
+      width: 98.9vw;
+      height: 100wh;
+      object-fit: fil;
+    }
+  } //end of .top_bgv
+
+  // 모바일전용
+  > .top_mobile {
+    display: block;
+
+    @include tablet() {
+      display: block;
+      width: 100vw;
+    }
+
+    > .frame {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  } //end of .top_mobile
+} //end of #home
+
+// #ABOUT
+
+#about {
+  min-width: 1200px;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  @include tablet() {
+    min-width: 100%;
+    height: 120vh;
+    align-items: center;
+  }
+
+  > .intro {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    @include tablet() {
+      width: 940px;
+      height: 500px;
+      padding: 0 20px;
+    }
+
+    @include mobile() {
+      width: 550px;
+      height: 250px;
+    }
+
+    > h2 {
+      padding-bottom: 20px;
+      font-size: 1.4rem;
+      font-family: "Jeonju_gakR";
+      font-weight: 300;
+
+      @include tablet() {
+        line-height: 1.2;
+        font-size: 2rem;
+      }
+
+      @include mobile() {
+        font-size: 1.4rem;
+      }
+    }
+
+    > p {
+      font-size: 0.8rem;
+      line-height: 2;
+
+      @include tablet() {
+        padding-top: 10px;
+        font-size: 1.2rem;
+        line-height: 2.5;
+        > br {
+          display: none;
+        }
+      }
+
+      @include mobile() {
+        padding-top: initial;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        font-weight: 200;
+      }
+    }
+  }
+} //end of #about
+
+// #STIILCUT
+#stillcut {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: center;
+  min-width: 1200px;
+  height: 100vh;
+  margin: 100px 0;
+
+  @include tablet() {
+    min-width: 100%;
+    justify-content: center;
+  }
+
+  @include mobile() {
+    min-width: 100%;
+  }
+
+  > .slides {
+    > .swiper {
+      width: 1100px;
+
+      @include tablet() {
+        width: 1023px;
+      }
+
+      @include mobile() {
+        width: 768px;
+      }
+
+      > .swiper-wrapper {
+        > .swiper-slide {
+          > .frame {
+            display: block;
+            width: 1100px;
+            @include tablet() {
+              width: 1023px;
+            }
+            @include mobile() {
+              width: 768px;
+            }
+            > img {
+              display: block;
+              width: 100%;
+            }
+          }
+        } //end of .swiper-slide
+      }
+      > .swiper-scrollbar {
+        --swiper-scrollbar-bg-color: rgba(255, 255, 255, 0.1);
+        --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.3);
+      } //end od .swiper-scrollbar
+    } //end of .swiper
+  } //end of .slides
+} //end of #stillcut
+
+// #CHARACTER
+
+#character {
+  min-width: 1200px;
+  padding-top: 20px;
+
+  @include tablet() {
+    min-width: 100%;
+  }
+
+  @include mobile() {
+    min-width: 100%;
+  }
+
+  > .chr-wraper-L {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+
+    @include mobile() {
+      padding: 0 5px;
+    }
+    > .frame {
+      display: block;
+      width: auto;
+      height: 70vh;
+      @include mobile() {
+        display: none;
+      }
+
+      @include tablet() {
+        width: 300px;
+        height: auto;
+      }
+
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    } //end of .frame
+
+    > .introduction {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: end;
+
+      > h3 {
+        margin: 0 0 20px 10px;
+        font-size: 1.4rem;
+        font-family: "Jeonju_gakR";
+        font-weight: 300;
+
+        @include tablet() {
+          font-size: 1.6rem;
+        }
+      }
+
+      > p {
+        margin: 0 0 20px 10px;
+        font-size: 0.8rem;
+        line-height: 2;
+        font-weight: 300;
+
+        @include tablet() {
+          width: 455px;
+          font-size: 0.9rem;
+
+          > br {
+            display: none;
+          }
+        }
+
+        @include mobile() {
+          width: initial;
+        }
+      }
+    } //end of .intoruction
+  } //end of .chr-wraper-L
+
+  > .chr-wraper-R {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: end;
+
+    @include mobile() {
+      padding: 0 5px;
+    }
+
+    > .frame {
+      display: block;
+      width: auto;
+      height: 70vh;
+      @include mobile() {
+        display: none;
+      }
+
+      @include tablet() {
+        width: 300px;
+        height: auto;
+      }
+
+      > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    > .introduction {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: end;
+
+      > h3 {
+        margin: 0 10px 20px 0;
+        font-size: 1.4rem;
+        font-family: "Jeonju_gakR";
+        font-weight: 300;
+        text-align: right;
+
+        @include tablet() {
+          font-size: 1.6rem;
+        }
+      }
+
+      > p {
+        margin: 0 10px 20px 0;
+        font-size: 0.8rem;
+        line-height: 2;
+        font-weight: 300;
+        text-align: right;
+
+        @include tablet() {
+          width: 455px;
+          font-size: 0.9rem;
+
+          > br {
+            display: none;
+          }
+        }
+
+        @include mobile() {
+          width: initial;
+        }
+      }
+    } //end of .intoruction
+  } //end of .chr-wraper-R
+} //end of character
+
+// 푸터
+
+footer {
+  // outline: 1px solid grey;
+  color: $sec-color;
+
+  @include tablet() {
+    min-width: 100%;
+  }
+
+  margin: 50px auto 30px;
+  > .folicy {
+    text-align: center;
+    line-height: 2;
+  }
+} //end of footer
