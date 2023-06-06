@@ -1,0 +1,251 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "JeonjuSunR";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/JeonjuSunR.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  background-color: #090909;
+  scroll-behavior: smooth;
+}
+@media screen and (max-width: 768px) {
+  html #wrap,
+  body #wrap {
+    display: none;
+  }
+  html body:after,
+  body body:after {
+    display: block;
+    font-size: 24px;
+    line-height: 100vh;
+    text-align: center;
+    content: "모바일을 지원하지 않습니다.";
+  }
+}
+
+#wrap {
+  min-width: 1300px;
+}
+
+.header > nav {
+  position: fixed;
+  right: 2%;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1000;
+}
+.header > nav > .gnb > ol > li {
+  margin: 20px 0;
+}
+.header > nav > .gnb > ol > li.on > a {
+  background-color: #ca171e;
+}
+.header > nav > .gnb > ol > li > a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  text-indent: -9999px;
+  border: 2px solid #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#home {
+  position: relative;
+  min-width: 1300px;
+  height: 100vh;
+}
+#home > .top_img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+#home > .top_img > .frame {
+  display: block;
+  width: 1300px;
+}
+#home > .top_img > .frame > img {
+  display: block;
+  width: 100%;
+}
+#home > .top_bgv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+#home > .top_bgv > video {
+  display: block;
+  width: 98.9vw;
+  height: 100wh;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+#about {
+  position: relative;
+  min-width: 1300px;
+  height: 40vh;
+  margin: 100px auto;
+  padding: 50px 0;
+}
+#about > .intro {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: start;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding-left: 20px;
+}
+#about > .intro > h2 {
+  color: #f2f2f2;
+  font-size: 1.4rem;
+  font-family: "JeonjuSunR";
+  font-weight: 300;
+  line-height: 2;
+}
+#about > .intro > p {
+  color: #f2f2f2;
+  font-size: 0.8rem;
+  line-height: 2;
+}
+
+#stillcut {
+  position: relative;
+  min-width: 1300px;
+  height: 80vh;
+  margin: 50px 0;
+}
+#stillcut > .slides > .swiper {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 1100px;
+}
+#stillcut > .slides > .swiper > .swiper-wrapper > .swiper-slide > .frame {
+  display: block;
+  width: 1100px;
+}
+#stillcut > .slides > .swiper > .swiper-wrapper > .swiper-slide > .frame > img {
+  display: block;
+  width: 100%;
+}
+#stillcut > .slides > .swiper > .swiper-scrollbar {
+  --swiper-scrollbar-bg-color: rgba(255, 255, 255, 0.1);
+  --swiper-scrollbar-drag-bg-color: rgba(255, 255, 255, 0.3);
+}
+
+#character {
+  position: relative;
+  min-width: 1300px;
+  height: 100vh;
+  margin: 50px 0;
+}
+#character > .slides > .frame-mobile {
+  display: none;
+}
+#character > .slides > .swiper > .swiper-wrapper > .swiper-slide {
+  position: relative;
+  width: 1300px;
+}
+#character > .slides > .swiper > .swiper-wrapper > .swiper-slide > .frame {
+  display: block;
+  width: 400px;
+}
+#character > .slides > .swiper > .swiper-wrapper > .swiper-slide > .frame > img {
+  display: block;
+  width: 100%;
+}
+#character > .slides > .swiper > .swiper-wrapper > .swiper-slide > h3 {
+  position: absolute;
+  left: 450px;
+  top: 300px;
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  font-family: "JeonjuSunR";
+}
+#character > .slides > .swiper > .swiper-wrapper > .swiper-slide > p {
+  position: absolute;
+  left: 450px;
+  top: 350px;
+  color: #f2f2f2;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+#character > .slides > .swiper > .swiper-wrapper > .swiper-slide > p > span {
+  font-size: 1.1rem;
+  line-height: 3;
+}
+#character > .slides > .swiper > .swiper-button-next {
+  --swiper-navigation-size: 35px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 5%;
+  --swiper-navigation-color: $sec-color;
+}
+
+footer {
+  position: relative;
+  min-width: 1300px;
+  height: 180px;
+  margin: 100px auto 50px;
+  padding: 50px 0 0;
+}
+footer > .sns {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+footer > .sns > .snsicon {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  height: 35px;
+}
+footer > .sns > .snsicon > a {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+footer > .sns > .snsicon > a:hover {
+  background-color: #ca171e;
+  border-radius: 10px;
+}
+footer > .sns > .snsicon > a > i {
+  width: 100%;
+  color: #f2f2f2;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+}
+footer > .policy {
+  height: 50px;
+}
+footer > .policy > p {
+  margin: 10px 0;
+  color: #f2f2f2;
+  font-size: 0.8rem;
+  text-align: center;
+}
+footer > .policy > p > a {
+  color: #f2f2f2;
+}
+footer > .policy > p > a:hover {
+  text-decoration: underline;
+}
+footer > address {
+  color: #c3c7aa;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 30px;
+}/*# sourceMappingURL=style.css.map */
