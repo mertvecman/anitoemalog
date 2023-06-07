@@ -135,7 +135,7 @@ header {
 
   // 모바일전용
   > .top_mobile {
-    display: block;
+    display: none;
 
     @include tablet() {
       display: block;
@@ -213,7 +213,7 @@ header {
       @include tablet() {
         padding-top: 10px;
         font-size: 1.2rem;
-        line-height: 2.5;
+        line-height: 2;
         > br {
           display: none;
         }
@@ -435,6 +435,38 @@ header {
     } //end of .intoruction
   } //end of .chr-wraper-R
 } //end of character
+
+// #TEASER
+#teaser {
+  height: 100vh;
+  min-width: 1200px;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet() {
+    min-width: 100%;
+  }
+
+  @include mobile() {
+    display: none;
+  }
+
+  > .video-container {
+    width: 900px;
+
+    @include tablet() {
+      width: 650px;
+    }
+
+    > video {
+      display: block;
+      width: 100%;
+    }
+  } //end of .video-container
+} //end of #teaser
 
 // 푸터
 

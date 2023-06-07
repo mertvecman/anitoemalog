@@ -100,7 +100,7 @@ header > nav > .gnb > ol > li > a {
      object-fit: fil;
 }
 #home > .top_mobile {
-  display: block;
+  display: none;
 }
 @media (max-width: 1023px) {
   #home > .top_mobile {
@@ -177,7 +177,7 @@ header > nav > .gnb > ol > li > a {
   #about > .intro > p {
     padding-top: 10px;
     font-size: 1.2rem;
-    line-height: 2.5;
+    line-height: 2;
   }
   #about > .intro > p > br {
     display: none;
@@ -397,6 +397,37 @@ header > nav > .gnb > ol > li > a {
   #character > .chr-wraper-R > .introduction > p {
     width: initial;
   }
+}
+
+#teaser {
+  height: 100vh;
+  min-width: 1200px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1023px) {
+  #teaser {
+    min-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #teaser {
+    display: none;
+  }
+}
+#teaser > .video-container {
+  width: 900px;
+}
+@media (max-width: 1023px) {
+  #teaser > .video-container {
+    width: 650px;
+  }
+}
+#teaser > .video-container > video {
+  display: block;
+  width: 100%;
 }
 
 footer {
