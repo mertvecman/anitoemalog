@@ -52,18 +52,20 @@ body {
 // 헤더
 
 header {
+  display: none;
+
   @include tablet() {
     display: none;
   }
+
   > nav {
     position: fixed;
     right: 2%;
     top: 50%;
     transform: translate(0, -50%);
     z-index: 1000;
-
     > .gnb {
-      > ol {
+      > .indicator {
         > li {
           margin: 20px 0;
 
@@ -81,9 +83,9 @@ header {
             box-sizing: border-box;
             border-radius: 50%;
             background-color: rgba(0, 0, 0, 0.5);
-          }
+          } //end of a
         } //end of li
-      } //end of ol
+      } //end of .indicator
     } //end of .gnb
   } //end of nav
 } //end of header
@@ -246,6 +248,7 @@ header {
 
   @include mobile() {
     min-width: 100%;
+    justify-content: center;
   }
 
   > .slides {
@@ -253,11 +256,11 @@ header {
       width: 1100px;
 
       @include tablet() {
-        width: 1023px;
+        width: 100vw;
       }
 
       @include mobile() {
-        width: 768px;
+        width: 100vw;
       }
 
       > .swiper-wrapper {
@@ -455,7 +458,7 @@ header {
   }
 
   > .video-container {
-    width: 900px;
+    width: 70vw;
 
     @include tablet() {
       width: 100vw;

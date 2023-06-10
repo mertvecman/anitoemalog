@@ -21,6 +21,9 @@ body {
   }
 }
 
+header {
+  display: none;
+}
 @media (max-width: 1023px) {
   header {
     display: none;
@@ -33,13 +36,13 @@ header > nav {
   transform: translate(0, -50%);
   z-index: 1000;
 }
-header > nav > .gnb > ol > li {
+header > nav > .gnb > .indicator > li {
   margin: 20px 0;
 }
-header > nav > .gnb > ol > li.on > a, header > nav > .gnb > ol > li:hover > a {
+header > nav > .gnb > .indicator > li.on > a, header > nav > .gnb > .indicator > li:hover > a {
   background-color: #ca171e;
 }
-header > nav > .gnb > ol > li > a {
+header > nav > .gnb > .indicator > li > a {
   display: block;
   width: 12px;
   height: 12px;
@@ -210,6 +213,7 @@ header > nav > .gnb > ol > li > a {
 @media (max-width: 768px) {
   #stillcut {
     min-width: 100%;
+    justify-content: center;
   }
 }
 #stillcut > .slides > .swiper {
@@ -217,12 +221,12 @@ header > nav > .gnb > ol > li > a {
 }
 @media (max-width: 1023px) {
   #stillcut > .slides > .swiper {
-    width: 1023px;
+    width: 100vw;
   }
 }
 @media (max-width: 768px) {
   #stillcut > .slides > .swiper {
-    width: 768px;
+    width: 100vw;
   }
 }
 #stillcut > .slides > .swiper > .swiper-wrapper > .swiper-slide > .frame {
@@ -418,7 +422,7 @@ header > nav > .gnb > ol > li > a {
   }
 }
 #teaser > .video-container {
-  width: 900px;
+  width: 70vw;
 }
 @media (max-width: 1023px) {
   #teaser > .video-container {
