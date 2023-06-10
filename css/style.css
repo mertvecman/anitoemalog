@@ -44,7 +44,7 @@ header > nav > .gnb > ol > li > a {
   width: 12px;
   height: 12px;
   text-indent: -9999px;
-  border: 2px solid #f2f2f2;
+  border: 1px solid #f2f2f2;
   box-sizing: border-box;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -161,7 +161,7 @@ header > nav > .gnb > ol > li > a {
 @media (max-width: 1023px) {
   #about > .intro > h2 {
     line-height: 1.2;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 768px) {
@@ -176,8 +176,8 @@ header > nav > .gnb > ol > li > a {
 @media (max-width: 1023px) {
   #about > .intro > p {
     padding-top: 10px;
-    font-size: 1.2rem;
-    line-height: 2;
+    font-size: 1rem;
+    line-height: 1.4;
   }
   #about > .intro > p > br {
     display: none;
@@ -414,7 +414,7 @@ header > nav > .gnb > ol > li > a {
 }
 @media (max-width: 768px) {
   #teaser {
-    display: none;
+    min-width: 100%;
   }
 }
 #teaser > .video-container {
@@ -422,7 +422,12 @@ header > nav > .gnb > ol > li > a {
 }
 @media (max-width: 1023px) {
   #teaser > .video-container {
-    width: 650px;
+    width: 100vw;
+  }
+}
+@media (max-width: 768px) {
+  #teaser > .video-container {
+    width: 100vw;
   }
 }
 #teaser > .video-container > video {

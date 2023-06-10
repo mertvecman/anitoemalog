@@ -1,12 +1,6 @@
 // 네비게이션바
 $(function () {
-  const $nav = $("header > nav");
-  const $mnu = $nav.find(".gnb > ol > li > a");
-
-  // $mnu.click(function (evt) {
-  //   preventDefault(evt);
-  //   $("html, body").animate({ scrollTop: $(this.hash).offset.top }, 300);
-  // });
+  const $mnu = $("header > nav > .gnb > ol > li > a");
 
   const arrTopVal = [];
   $("article").each(function (idx) {
