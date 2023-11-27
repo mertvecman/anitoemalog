@@ -125,7 +125,7 @@ header > nav {
 @media screen and (max-width: 670px) {
   .home__img {
     display: block;
-    width: 100vw;
+    width: 100%;
     height: 100%;
   }
 }
@@ -160,6 +160,7 @@ header > nav {
 
 @media screen and (max-width: 670px) {
   #about > .intro {
+    width: 100%;
     padding: 0 20px;
   }
 }
@@ -221,7 +222,7 @@ header > nav {
 @media screen and (max-width: 670px) {
   #stillcut > .swiper-1 {
     width: 100%;
-    height: 100%;
+    height: initial;
     transform: rotate(90deg);
   }
 }
@@ -234,6 +235,7 @@ header > nav {
   width: 100%;
   height: 100%;
 }
+
 .swiper-1 > .swiper-wrapper > .swiper-slide > img {
   display: block;
   width: 100%;
@@ -263,7 +265,7 @@ header > nav {
 
 @media screen and (max-width: 670px) {
   #character > .swiper-2 {
-    width: 100vw;
+    width: 95vw;
   }
 }
 
@@ -337,7 +339,7 @@ header > nav {
 
 @media screen and (max-width: 670px) {
   .swiper-2 > .swiper-wrapper > .swiper-slide > .character__article {
-    padding-right: 20px;
+    padding-right: 10px;
 
     font-size: 1rem;
     line-height: 1.4rem;
