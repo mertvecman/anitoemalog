@@ -425,6 +425,14 @@ footer > .policy {
   line-height: 1rem;
 }
 
+footer > .policy > .policy__origin > br {
+  display: none;
+}
+@media screen and (max-width: 670px) {
+  footer > .policy > .policy__origin > br {
+    display: block;
+  }
+}
 @media screen and (max-width: 670px) {
   footer > .policy {
     width: 100%;
