@@ -1,7 +1,6 @@
 @charset "utf-8";
 
-/* 프리텐다드 */
-
+/* 기본 프리텐다드 */
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -10,47 +9,12 @@
   font-style: normal;
 }
 
-/* 에스코어드림 */
+/* reset */
 
-@font-face {
-  font-family: "S-CoreDream-3Light";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+html {
+  scroll-behavior: smooth;
 }
 
-/* 오이냉체 */
-
-@font-face {
-  font-family: "EF_cucumbersalad";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_cucumbersalad.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* 116수박화채 */
-
-@font-face {
-  font-family: "116watermelon";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/116watermelon.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* 전주완판본 각체 */
-
-@font-face {
-  font-family: "Jeonju_gakR";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Jeonju_gakR.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* CSS RESET */
 html,
 body {
   width: 100%;
@@ -186,17 +150,16 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: #fff;
+  color: #ccc;
   text-decoration: none;
 }
 
 body {
   overflow-y: scroll;
-  color: #333;
+  color: #ccc;
   font-size: 62.5%;
   font-family: "Pretendard-Regular", 돋움, 굴림;
   line-height: 1.25em;
-  background-color: #fff;
 }
 
 /*공통요소*/
