@@ -220,7 +220,8 @@ header > nav {
 }
 @media screen and (max-width: 670px) {
   #stillcut > .swiper-1 {
-    width: var(--widthM);
+    width: 100%;
+    height: 100%;
     transform: rotate(90deg);
   }
 }
@@ -262,7 +263,7 @@ header > nav {
 
 @media screen and (max-width: 670px) {
   #character > .swiper-2 {
-    width: var(--widthM);
+    width: 100vw;
   }
 }
 
@@ -282,8 +283,10 @@ header > nav {
 
 @media screen and (max-width: 670px) {
   .swiper-2 > .swiper-wrapper > .swiper-slide {
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 30% 1fr;
     grid-template-rows: 1fr 4fr;
+    align-content: center;
+    align-items: center;
     gap: 10px;
   }
 }
@@ -298,7 +301,7 @@ header > nav {
 
 @media screen and (max-width: 670px) {
   .swiper-2 > .swiper-wrapper > .swiper-slide > .frame {
-    width: calc(var(--widthM) * 0.2);
+    width: 100%;
   }
 }
 
@@ -320,6 +323,8 @@ header > nav {
 @media screen and (max-width: 670px) {
   .swiper-2 > .swiper-wrapper > .swiper-slide > .character__name {
     font-size: 1.6rem;
+
+    align-self: end;
   }
 }
 
@@ -367,7 +372,6 @@ footer > .sns {
 @media screen and (max-width: 670px) {
   footer > .sns {
     width: 100%;
-    padding: 0 20px;
   }
 }
 
@@ -379,6 +383,13 @@ footer > .sns > .sns__icon {
   width: 20%;
   height: 100%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 670px) {
+  footer > .sns > .sns__icon {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 footer > .sns > .sns__icon > a {
@@ -415,7 +426,6 @@ footer > .policy {
 @media screen and (max-width: 670px) {
   footer > .policy {
     width: 100%;
-    padding: 0 20px;
   }
 }
 
